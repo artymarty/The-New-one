@@ -1,3 +1,5 @@
+HALELLUA
+
 04 Teach : Team Activity
 Practice with Git
 Objectives
@@ -97,3 +99,4 @@ git push
 Congratulations! You now know how to resolve simple merge conflicts using git.
 Make sure everyone on your team understands and receives a copy of this code.
 
+hALLELUA
