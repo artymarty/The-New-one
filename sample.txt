@@ -72,7 +72,12 @@ Verify that the new changes show up in the commit history on GitHub, but don't�
 12. hint: (e.g., 'git pull ...') before pushing again.
 13. hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 Remember, one of the fundamental rules of using git is:
-Always pull before you push.
+Always pull before you 
+
+
+
+
+push.
 14. Attempt to fix this problem by executing git pull. This will also fail:
 15. CONFLICT (content): Merge conflict in sample.txt
 16. Failed to merge in the changes.
