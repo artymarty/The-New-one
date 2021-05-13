@@ -4,53 +4,64 @@ Objectives
 * Practice using git.
 * Learn how to fix problems with git.
 Assignment
-Before continuing, you should have completed this week's preparation assignment.
+Before continuing, you should have completed this week'sÂ preparation assignment.
 You're going to practice using git to track changes to simple text files.
 PART I: CREATING, COMMITTING AND PUSHING CHANGES
-1. Open the command line and navigate to a directory where you'd like to work. Use the git clone command to create a local copy of the repository you created on GitHub during the preparation assignment.
+1. Open the command line and navigate to a directory where you'd like to work. Use theÂ git cloneÂ command to create a local copy of the repository you created on GitHub during the preparation assignment.
 You can find the URL used to clone your repository on github. In the W04-Prepare reading, you were asked to complete a short GitHub tutorial which resulted in your first GitHub repository. Using the URL from the repository that you created, the command to clone your responsitory would be:
 git clone [URL of the GitHub repository your created from the reading]
 You will now have a directory named after your GitHub repository in your current directory.
-2. Using your favorite text editor, create a text file called sample.txt write a short message in it, and save it to the repository directory.
-3. Next, change directories to your git repository directory and use the git status command to view the current status of your repository. The sample.txt file will appear in the list of untracked files. This means it hasn't been added to the git repository yet.
+2. Using your favorite text editor, create a text file calledÂ sample.txtÂ write a short message in it, and save it to the repository directory.
+3. Next, change directories to your git repository directory and use theÂ git statusÂ command to view the current status of your repository. TheÂ sample.txtÂ file will appear in the list ofÂ untracked files. This means it hasn't been added to the git repository yet.
 4. cd <your repository name>
 5. git status
-6. Next, use the git add command to add this file to the next commit:
+6. Next, use theÂ git addÂ command to add this file to the next commit:
 7. git add sample.txt
-If you rerun the git status command, you'll see that sample.txt now appears in the list of changes to be committed.
-8. To commit your changes, execute the git commit command, providing a message describing your changes:
+If you rerun theÂ git statusÂ command, you'll see thatÂ sample.txtÂ now appears in the list of changes to be committed.
+8. To commit your changes, execute theÂ git commitÂ command, providing a message describing your changes:
 9. git commit -m "Added the best file ever."
-10. Now, to push your changes up to the copy of the repository on GitHub, execute the git push command.
+10. Now, to push your changes up to the copy of the repository on GitHub, execute theÂ git pushÂ command.
 11. git push
 12. Reload your repository page on GitHub, and verify that your new file is listed there.
 13. On the repository webpage, click the link showing your commit history:
 
 This will show you a list of all the commits you have pushed to the repository.
 Congratulations! You now know how to add, commit, and push changes from your local repository to the central repository on GitHub.
+
+
+
+
 PART II: PULLING CHANGES
-Often when using version control systems like GitHub, you're working with a team of other developers who will be making changes to the code as well. As they push their changes to the central repository, you need to pull those changes to your local copy, so that you can stay in sync with what everyone else is doing.
+Often when using version control systems like GitHub, you're working with a team of other developers who will be making changes to the code as well. As theyÂ pushÂ their changes to the central repository, you need toÂ pullÂ those changes to your local copy, so that you can stay in sync with what everyone else is doing.
 We're going to use GitHub's direct editor to simulate that process now. Normally, we don't edit files directly in GitHub, but we'll do that here in order to simulate another developer pushing a commit to the central repository.
-1. Open up your repository page on GitHub and click on the sample.txt file that you added in Part I.
+1. Open up your repository page on GitHub and click on theÂ sample.txtÂ file that you added in Part I.
 2. Click on the pencil icon on the right side of the screen, which will allow you to edit the file directly in GitHub.
+
+        I clicked on pencil
 
 3. Change the text in the file, then at the bottom of the screen enter a commit message in the first field of the Commit Changes box. Then, Click the Commit Changes button at the bottom of the screen.
 
+        Text little bit changed
+
 4. If you click on the commit history icon again, you should now see your commit from part one, along with the commit you just made.
 We're pretending that this new commit came from another developer, who made changes in their local repository, then pushed those changes to the central repository on GitHub.
-5. Now you need to use the git pull command to pull the changes from the central repository to your local copy:
+5. Now you need to use theÂ git pullÂ command to pull the changes from the central repository to your local copy:
 6. git pull
+
+
+
 7. View the contents of the sample.txt file on your computer, and you should see the updated version.
 Congratulations! You now know how to pull changes from GitHub to your local repository.
 ??STRETCH CHALLENGE??
-When multiple developers try to change the same files at the same time, this can result in what is called a merge conflict. By default, git is pretty good at merging changes during pulls and pushes. Sometimes however, it can't figure out the best choice, and so it leaves it up to you.
+When multiple developers try to change the same files at the same time, this can result in what is called aÂ merge conflict. By default, git is pretty good at merging changes during pulls and pushes. Sometimes however, it can't figure out the best choice, and so it leaves it up to you.
 We're going to use GitHub's direct editor to simulate a merge conflict.
 1. Just like we did in Part II, open up GitHub and modify the text in the sample.txt file, making sure you commit the changes.
-Verify that the new changes show up in the commit history on GitHub, but don't pull those changes to your local repository yet.
-2. Now, open sample.txt on your computer, and modify the same line of text that you modified in step 1, but change it to something different.
-3. Add sample.txt to the commit by using git add, then commit the changes using git commit:
+Verify that the new changes show up in the commit history on GitHub, butÂ don'tÂ pull those changes to your local repository yet.
+2. Now, openÂ sample.txtÂ on your computer, and modify the same line of text that you modified in step 1, but change it to something different.
+3. Add sample.txt to the commit by usingÂ git add, then commit the changes usingÂ git commit:
 4. git add sample.txt
 5. git commit -m "Made the best changes ever."
-6. Now, attempt to push your changes to GitHub using the git push command. Observe how it fails with an error:
+6. Now, attempt to push your changes to GitHub using theÂ git pushÂ command. Observe how it fails with an error:
 7. ! [rejected]        master -> master (fetch first)
 8. error: failed to push some refs to ...
 9. hint: Updates were rejected because the remote contains work that you do
@@ -60,12 +71,12 @@ Verify that the new changes show up in the commit history on GitHub, but don't p
 13. hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 Remember, one of the fundamental rules of using git is:
 Always pull before you push.
-14. Attempt to fix this problem by executing git pull. This will also fail:
+14. Attempt to fix this problem by executingÂ git pull. This will also fail:
 15. CONFLICT (content): Merge conflict in sample.txt
 16. Failed to merge in the changes.
 17. ...
 18. When you have resolved this problem, run "git rebase --continue".
-19. If you open sample.txt now, you will see something like the following:
+19. If you openÂ sample.txtÂ now, you will see something like the following:
 20. <<<<<<< fa3f0f0d0dc7834b799af3e4f8a0cf21dd033ff6
 21. Hello World!!!
 22. =======
@@ -82,7 +93,7 @@ If all went well, we should see a message from git telling us that it is applyin
 If you get an error message about `no rebase in progress`, instead of rebasing, you can just commit and push:
 git commit -m "Fixed merge conflict"
 git push
-30. As a final step, we use git push to send our merged changes back to the central repository.
+30. As a final step, we useÂ git pushÂ to send our merged changes back to the central repository.
 Congratulations! You now know how to resolve simple merge conflicts using git.
 Make sure everyone on your team understands and receives a copy of this code.
 
